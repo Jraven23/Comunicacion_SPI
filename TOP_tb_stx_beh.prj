@@ -1,0 +1,7 @@
+vhdl isim_temp "sincronizador.vhd"
+vhdl isim_temp "master_SPI.vhd"
+vhdl isim_temp "decoder.vhd"
+vhdl isim_temp "clock_divider2.vhd"
+vhdl isim_temp "antirrebote.vhd"
+vhdl isim_temp "TOP.vhd"
+vhdl isim_temp "TOP_tb.vhd"

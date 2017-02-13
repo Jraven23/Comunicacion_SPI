@@ -1,0 +1,158 @@
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "D:/Comunicacion_SPI _display - Copy/TOP.xst" -ofn "D:/Comunicacion_SPI _display - Copy/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s200-ft256-5 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 

@@ -1,0 +1,41 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/jorge/Desktop/Comunicacion_SPI _display/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/jorge/Desktop/Comunicacion_SPI _display/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/jorge/Desktop/Comunicacion_SPI _display/master_SPI.vhd" in Library work.
+Entity <spi> compiled.
+Entity <spi> (Architecture <behavioral>) compiled.
+Entity <statemachine> compiled.
+Entity <statemachine> (Architecture <behavioral>) compiled.
+Entity <clock_divider> compiled.
+Entity <clock_divider> (Architecture <behavioral>) compiled.
+Entity <master_spi> compiled.
+Entity <master_spi> (Architecture <estructural>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> 
+
+Total memory usage is 261724 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

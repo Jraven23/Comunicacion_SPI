@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP_tb_isim_beh.exe" -prj "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP_tb_beh.prj" "work.TOP_tb" 

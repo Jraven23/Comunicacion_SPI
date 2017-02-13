@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/jorge/Desktop/Comunicacion_SPI _display/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/jorge/Desktop/Comunicacion_SPI _display/xst"
+elaborate
+-ifn master_SPI.prj
+-ifmt mixed

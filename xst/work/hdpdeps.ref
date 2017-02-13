@@ -1,0 +1,69 @@
+V3 44
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/antirrebote.vhd" 2017/01/19.17:16:09 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/clock_divider2.vhd" 2017/01/19.18:29:36 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/decoder.vhd" 2017/01/17.13:01:05 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/master_SPI.vhd" 2017/01/19.16:28:41 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/sincronizador.vhd" 2017/01/19.17:14:29 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP.vhd" 2017/01/20.11:57:59 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display/antirrebote.vhd" 2017/01/19.17:16:09 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display/clock_divider2.vhd" 2017/01/19.18:29:36 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display/decoder.vhd" 2017/01/17.13:01:05 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display/master_SPI.vhd" 2017/01/19.16:28:41 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display/sincronizador.vhd" 2017/01/19.17:14:29 P.15xf
+FL "C:/Users/jorge/Desktop/Comunicacion_SPI _display/TOP.vhd" 2017/01/19.18:27:02 P.15xf
+FL "D:/Comunicacion_SPI _display - Copy/antirrebote.vhd" 2017/01/19.17:16:10 P.15xf
+EN work/antirrebote 1484912749 \
+      FL "D:/Comunicacion_SPI _display - Copy/antirrebote.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177
+AR work/antirrebote/RT 1484912750 \
+      FL "D:/Comunicacion_SPI _display - Copy/antirrebote.vhd" \
+      EN work/antirrebote 1484912749
+FL "D:/Comunicacion_SPI _display - Copy/clock_divider2.vhd" 2017/01/20.12:22:02 P.15xf
+EN work/Clock_divider2 1484912743 \
+      FL "D:/Comunicacion_SPI _display - Copy/clock_divider2.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Clock_divider2/Behavioral 1484912744 \
+      FL "D:/Comunicacion_SPI _display - Copy/clock_divider2.vhd" \
+      EN work/Clock_divider2 1484912743
+FL "D:/Comunicacion_SPI _display - Copy/decoder.vhd" 2017/01/17.13:01:06 P.15xf
+EN work/decoder 1484912745 FL "D:/Comunicacion_SPI _display - Copy/decoder.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/decoder/dataflow 1484912746 \
+      FL "D:/Comunicacion_SPI _display - Copy/decoder.vhd" EN work/decoder 1484912745
+FL "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" 2017/01/20.12:45:22 P.15xf
+EN work/SPI 1484912735 FL "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/SPI/Behavioral 1484912736 \
+      FL "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" EN work/SPI 1484912735
+EN work/StateMachine 1484912737 \
+      FL "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/StateMachine/behavioral 1484912738 \
+      FL "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" \
+      EN work/StateMachine 1484912737
+EN work/Clock_divider 1484912739 \
+      FL "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Clock_divider/Behavioral 1484912740 \
+      FL "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" \
+      EN work/Clock_divider 1484912739
+EN work/master_SPI 1484912741 \
+      FL "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/master_SPI/estructural 1484912742 \
+      FL "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" EN work/master_SPI 1484912741 \
+      CP SPI CP StateMachine CP Clock_divider
+FL "D:/Comunicacion_SPI _display - Copy/sincronizador.vhd" 2017/01/19.17:14:30 P.15xf
+EN work/sincronizador 1484912747 \
+      FL "D:/Comunicacion_SPI _display - Copy/sincronizador.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/sincronizador/Behavioral 1484912748 \
+      FL "D:/Comunicacion_SPI _display - Copy/sincronizador.vhd" \
+      EN work/sincronizador 1484912747
+FL "D:/Comunicacion_SPI _display - Copy/TOP.vhd" 2017/01/20.12:38:06 P.15xf
+EN work/TOP 1484912751 FL "D:/Comunicacion_SPI _display - Copy/TOP.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/TOP/estructural 1484912752 \
+      FL "D:/Comunicacion_SPI _display - Copy/TOP.vhd" EN work/TOP 1484912751 \
+      CP master_SPI CP Clock_divider2 CP decoder CP sincronizador CP antirrebote

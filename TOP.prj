@@ -1,0 +1,6 @@
+vhdl work "sincronizador.vhd"
+vhdl work "master_SPI.vhd"
+vhdl work "decoder.vhd"
+vhdl work "clock_divider2.vhd"
+vhdl work "antirrebote.vhd"
+vhdl work "TOP.vhd"

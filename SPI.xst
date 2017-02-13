@@ -1,0 +1,5 @@
+set -tmpdir "D:/Comunicacion_SPI _display - Copy/xst/projnav.tmp"
+set -xsthdpdir "D:/Comunicacion_SPI _display - Copy/xst"
+elaborate
+-ifn SPI.prj
+-ifmt mixed

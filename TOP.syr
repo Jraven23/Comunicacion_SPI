@@ -1,0 +1,769 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" in Library work.
+Architecture behavioral of Entity spi is up to date.
+Architecture behavioral of Entity statemachine is up to date.
+Architecture behavioral of Entity clock_divider is up to date.
+Architecture estructural of Entity master_spi is up to date.
+Compiling vhdl file "D:/Comunicacion_SPI _display - Copy/clock_divider2.vhd" in Library work.
+Architecture behavioral of Entity clock_divider2 is up to date.
+Compiling vhdl file "D:/Comunicacion_SPI _display - Copy/decoder.vhd" in Library work.
+Architecture dataflow of Entity decoder is up to date.
+Compiling vhdl file "D:/Comunicacion_SPI _display - Copy/sincronizador.vhd" in Library work.
+Architecture behavioral of Entity sincronizador is up to date.
+Compiling vhdl file "D:/Comunicacion_SPI _display - Copy/antirrebote.vhd" in Library work.
+Architecture rt of Entity antirrebote is up to date.
+Compiling vhdl file "D:/Comunicacion_SPI _display - Copy/TOP.vhd" in Library work.
+Architecture estructural of Entity top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TOP> in library <work> (architecture <estructural>) with generics.
+	width = 8
+
+Analyzing hierarchy for entity <master_SPI> in library <work> (architecture <estructural>) with generics.
+	width = 8
+
+Analyzing hierarchy for entity <Clock_divider2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <decoder> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <sincronizador> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <antirrebote> in library <work> (architecture <rt>).
+
+Analyzing hierarchy for entity <SPI> in library <work> (architecture <behavioral>) with generics.
+	width = 8
+
+Analyzing hierarchy for entity <StateMachine> in library <work> (architecture <behavioral>) with generics.
+	width = 8
+
+Analyzing hierarchy for entity <Clock_divider> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <TOP> in library <work> (Architecture <estructural>).
+	width = 8
+    Set user-defined property "TIG =  TRUE" for signal <async_in> in unit <sincronizador>.
+    Set user-defined property "IOB =  FALSE" for signal <async_in> in unit <sincronizador>.
+WARNING:Xst:819 - "D:/Comunicacion_SPI _display - Copy/TOP.vhd" line 163: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <s_display>, <s_display2>
+Entity <TOP> analyzed. Unit <TOP> generated.
+
+Analyzing generic Entity <master_SPI> in library <work> (Architecture <estructural>).
+	width = 8
+Entity <master_SPI> analyzed. Unit <master_SPI> generated.
+
+Analyzing generic Entity <SPI> in library <work> (Architecture <behavioral>).
+	width = 8
+INFO:Xst:2679 - Register <carga_realizada> in unit <SPI> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <SPI> analyzed. Unit <SPI> generated.
+
+Analyzing generic Entity <StateMachine> in library <work> (Architecture <behavioral>).
+	width = 8
+WARNING:Xst:819 - "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd" line 150: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <state>
+Entity <StateMachine> analyzed. Unit <StateMachine> generated.
+
+Analyzing Entity <Clock_divider> in library <work> (Architecture <behavioral>).
+Entity <Clock_divider> analyzed. Unit <Clock_divider> generated.
+
+Analyzing Entity <Clock_divider2> in library <work> (Architecture <behavioral>).
+Entity <Clock_divider2> analyzed. Unit <Clock_divider2> generated.
+
+Analyzing Entity <decoder> in library <work> (Architecture <dataflow>).
+Entity <decoder> analyzed. Unit <decoder> generated.
+
+Analyzing Entity <sincronizador> in library <work> (Architecture <behavioral>).
+    Set user-defined property "ASYNC_REG =  TRUE" for signal <sreg>.
+    Set property "SHREG_EXTRACT = NO" for signal <sreg>.
+    Set user-defined property "HBLKNM =  sync_reg" for signal <sreg>.
+Entity <sincronizador> analyzed. Unit <sincronizador> generated.
+
+Analyzing Entity <antirrebote> in library <work> (Architecture <rt>).
+Entity <antirrebote> analyzed. Unit <antirrebote> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Clock_divider2>.
+    Related source file is "D:/Comunicacion_SPI _display - Copy/clock_divider2.vhd".
+    Found 13-bit up counter for signal <contador>.
+    Found 1-bit register for signal <temporal>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <Clock_divider2> synthesized.
+
+
+Synthesizing Unit <decoder>.
+    Related source file is "D:/Comunicacion_SPI _display - Copy/decoder.vhd".
+    Found 16x8-bit ROM for signal <led>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decoder> synthesized.
+
+
+Synthesizing Unit <sincronizador>.
+    Related source file is "D:/Comunicacion_SPI _display - Copy/sincronizador.vhd".
+    Found 1-bit register for signal <sync_out>.
+    Found 2-bit register for signal <sreg>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <sincronizador> synthesized.
+
+
+Synthesizing Unit <antirrebote>.
+    Related source file is "D:/Comunicacion_SPI _display - Copy/antirrebote.vhd".
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q2>.
+    Found 1-bit register for signal <Q3>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <antirrebote> synthesized.
+
+
+Synthesizing Unit <SPI>.
+    Related source file is "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd".
+WARNING:Xst:737 - Found 8-bit latch for signal <po>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit register for signal <ss_n>.
+    Found 1-bit register for signal <mosi>.
+    Found 31-bit down counter for signal <counter>.
+    Found 31-bit down counter for signal <counter2>.
+    Found 1-bit register for signal <snewbyte_receive>.
+    Found 1-bit register for signal <snewbyte_send>.
+    Found 8-bit register for signal <sr>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  12 D-type flip-flop(s).
+Unit <SPI> synthesized.
+
+
+Synthesizing Unit <StateMachine>.
+    Related source file is "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 5                                              |
+    | Clock              | sclk_n                    (falling_edge)       |
+    | Reset              | reset_n                   (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | reposo                                         |
+    | Power Up State     | reposo                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <s_wr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_rd>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <StateMachine> synthesized.
+
+
+Synthesizing Unit <Clock_divider>.
+    Related source file is "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd".
+    Found 8-bit up counter for signal <contador>.
+    Found 1-bit register for signal <temporal>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <Clock_divider> synthesized.
+
+
+Synthesizing Unit <master_SPI>.
+    Related source file is "D:/Comunicacion_SPI _display - Copy/master_SPI.vhd".
+Unit <master_SPI> synthesized.
+
+
+Synthesizing Unit <TOP>.
+    Related source file is "D:/Comunicacion_SPI _display - Copy/TOP.vhd".
+WARNING:Xst:1780 - Signal <state> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <next_state> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 8-bit latch for signal <display>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 4-bit tristate buffer for signal <tierra>.
+    Found 32-bit up counter for signal <contador>.
+    Found 32-bit adder for signal <contador$addsub0000> created at line 169.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Tristate(s).
+Unit <TOP> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 2
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 5
+ 13-bit up counter                                     : 1
+ 31-bit down counter                                   : 2
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 12
+ 1-bit register                                        : 10
+ 2-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 4
+ 1-bit latch                                           : 2
+ 8-bit latch                                           : 2
+# Tristates                                            : 1
+ 4-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Inst_master_SPI/statemachine_master/state/FSM> on signal <state[1:2]> with gray encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ reposo    | 00
+ carga     | 01
+ escritura | 11
+ lectura   | 10
+-----------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 2
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 5
+ 13-bit up counter                                     : 1
+ 31-bit down counter                                   : 2
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+# Latches                                              : 4
+ 1-bit latch                                           : 2
+ 8-bit latch                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <SPI> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 11.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 137
+ Flip-Flops                                            : 137
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP.ngr
+Top Level Output File Name         : TOP
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 27
+
+Cell Usage :
+# BELS                             : 717
+#      GND                         : 1
+#      INV                         : 70
+#      LUT1                        : 83
+#      LUT2                        : 119
+#      LUT3                        : 19
+#      LUT4                        : 84
+#      LUT4_L                      : 1
+#      MUXCY                       : 189
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 147
+# FlipFlops/Latches                : 155
+#      FD                          : 3
+#      FDC                         : 53
+#      FDC_1                       : 2
+#      FDCE                        : 62
+#      FDCE_1                      : 10
+#      FDE_1                       : 1
+#      FDPE                        : 2
+#      FDPE_1                      : 1
+#      FDR                         : 3
+#      LD                          : 10
+#      LDE_1                       : 8
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 26
+#      IBUF                        : 11
+#      OBUF                        : 11
+#      OBUFT                       : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                      201  out of   1920    10%  
+ Number of Slice Flip Flops:            147  out of   3840     3%  
+ Number of 4 input LUTs:                376  out of   3840     9%  
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of    173    15%  
+    IOB Flip Flops:                       8
+ Number of GCLKs:                         3  out of      8    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------+--------------------------------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)                            | Load  |
+-------------------------------------------------+--------------------------------------------------+-------+
+clk                                              | BUFGP                                            | 26    |
+clock_divider/temporal1                          | BUFG                                             | 35    |
+Inst_master_SPI/load_n(Inst_master_SPI/load_n1:O)| NONE(*)(Inst_master_SPI/statemachine_master/s_rd)| 2     |
+Inst_master_SPI/clock_master/temporal1           | BUFG                                             | 76    |
+display_not0001(display_not0001_wg_cy<7>:O)      | NONE(*)(display_0)                               | 8     |
+Inst_master_SPI/spi_master/snewbyte_receive      | NONE(Inst_master_SPI/spi_master/po_7)            | 8     |
+-------------------------------------------------+--------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------+--------------------------------------------+-------+
+Control Signal                                                               | Buffer(FF name)                            | Load  |
+-----------------------------------------------------------------------------+--------------------------------------------+-------+
+Inst_master_SPI/spi_master/clr_n_inv(Inst_master_SPI/spi_master/clr_n_inv1:O)| NONE(Inst_master_SPI/spi_master/counter2_0)| 73    |
+reset                                                                        | IBUF                                       | 57    |
+-----------------------------------------------------------------------------+--------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.518ns (Maximum Frequency: 105.060MHz)
+   Minimum input arrival time before clock: 3.318ns
+   Maximum output required time after clock: 10.481ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.506ns (frequency: 153.702MHz)
+  Total number of paths / destination ports: 385 / 27
+-------------------------------------------------------------------------
+Delay:               6.506ns (Levels of Logic = 4)
+  Source:            clock_divider/contador_2 (FF)
+  Destination:       clock_divider/contador_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clock_divider/contador_2 to clock_divider/contador_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.626   1.040  clock_divider/contador_2 (clock_divider/contador_2)
+     LUT4:I0->O            1   0.479   0.740  clock_divider/temporal_cmp_eq000031 (clock_divider/temporal_cmp_eq000031)
+     LUT4:I2->O            1   0.479   0.704  clock_divider/temporal_cmp_eq000044_SW0 (N14)
+     LUT4:I3->O           14   0.479   1.304  clock_divider/temporal_cmp_eq000044 (clock_divider/temporal_cmp_eq0000)
+     LUT2:I0->O            1   0.479   0.000  clock_divider/Mcount_contador_eqn_01 (clock_divider/Mcount_contador_eqn_0)
+     FDC:D                     0.176          clock_divider/contador_0
+    ----------------------------------------
+    Total                      6.506ns (2.718ns logic, 3.788ns route)
+                                       (41.8% logic, 58.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_divider/temporal1'
+  Clock period: 9.518ns (frequency: 105.060MHz)
+  Total number of paths / destination ports: 17426 / 34
+-------------------------------------------------------------------------
+Delay:               9.518ns (Levels of Logic = 32)
+  Source:            contador_1 (FF)
+  Destination:       contador_0 (FF)
+  Source Clock:      clock_divider/temporal1 falling
+  Destination Clock: clock_divider/temporal1 falling
+
+  Data Path: contador_1 to contador_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              9   0.626   1.250  contador_1 (contador_1)
+     LUT1:I0->O            1   0.479   0.000  Madd_contador_addsub0000_cy<1>_rt (Madd_contador_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.435   0.000  Madd_contador_addsub0000_cy<1> (Madd_contador_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<2> (Madd_contador_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<3> (Madd_contador_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<4> (Madd_contador_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<5> (Madd_contador_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<6> (Madd_contador_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<7> (Madd_contador_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<8> (Madd_contador_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<9> (Madd_contador_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<10> (Madd_contador_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<11> (Madd_contador_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<12> (Madd_contador_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<13> (Madd_contador_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<14> (Madd_contador_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<15> (Madd_contador_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<16> (Madd_contador_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<17> (Madd_contador_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<18> (Madd_contador_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<19> (Madd_contador_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_contador_addsub0000_cy<20> (Madd_contador_addsub0000_cy<20>)
+     XORCY:CI->O           1   0.786   0.976  Madd_contador_addsub0000_xor<21> (contador_addsub0000<21>)
+     LUT4:I0->O            1   0.479   0.000  contador_cmp_eq0000_wg_lut<0> (contador_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  contador_cmp_eq0000_wg_cy<0> (contador_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  contador_cmp_eq0000_wg_cy<1> (contador_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  contador_cmp_eq0000_wg_cy<2> (contador_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  contador_cmp_eq0000_wg_cy<3> (contador_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  contador_cmp_eq0000_wg_cy<4> (contador_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  contador_cmp_eq0000_wg_cy<5> (contador_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  contador_cmp_eq0000_wg_cy<6> (contador_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          32   0.265   1.745  contador_cmp_eq0000_wg_cy<7> (contador_cmp_eq0000)
+     LUT2:I1->O            1   0.479   0.000  Mcount_contador_eqn_91 (Mcount_contador_eqn_9)
+     FDC:D                     0.176          contador_9
+    ----------------------------------------
+    Total                      9.518ns (5.547ns logic, 3.971ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_master_SPI/clock_master/temporal1'
+  Clock period: 7.516ns (frequency: 133.044MHz)
+  Total number of paths / destination ports: 7665 / 149
+-------------------------------------------------------------------------
+Delay:               7.516ns (Levels of Logic = 10)
+  Source:            Inst_master_SPI/spi_master/counter2_8 (FF)
+  Destination:       Inst_master_SPI/spi_master/counter_30 (FF)
+  Source Clock:      Inst_master_SPI/clock_master/temporal1 falling
+  Destination Clock: Inst_master_SPI/clock_master/temporal1 falling
+
+  Data Path: Inst_master_SPI/spi_master/counter2_8 to Inst_master_SPI/spi_master/counter_30
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.626   1.040  Inst_master_SPI/spi_master/counter2_8 (Inst_master_SPI/spi_master/counter2_8)
+     LUT3:I0->O            1   0.479   0.000  Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_lut<0> (Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<0> (Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<1> (Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<2> (Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<3> (Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<4> (Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<5> (Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<6> (Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          40   0.246   1.784  Inst_master_SPI/spi_master/snewbyte_send_cmp_eq0000_wg_cy<7> (Inst_master_SPI/spi_master/counter2_not0002_inv)
+     LUT3:I1->O           31   0.479   1.570  Inst_master_SPI/spi_master/counter_not00031 (Inst_master_SPI/spi_master/counter_not0003)
+     FDCE:CE                   0.524          Inst_master_SPI/spi_master/counter_0
+    ----------------------------------------
+    Total                      7.516ns (3.122ns logic, 4.395ns route)
+                                       (41.5% logic, 58.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_divider/temporal1'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.318ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       inst_antirrebote/Q3 (FF)
+  Destination Clock: clock_divider/temporal1 rising
+
+  Data Path: reset to inst_antirrebote/Q3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            60   0.715   1.711  reset_IBUF (Inst_master_SPI/clock_master/reset_n_inv)
+     FDR:R                     0.892          inst_antirrebote/Q1
+    ----------------------------------------
+    Total                      3.318ns (1.607ns logic, 1.711ns route)
+                                       (48.4% logic, 51.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_master_SPI/clock_master/temporal1'
+  Total number of paths / destination ports: 9 / 8
+-------------------------------------------------------------------------
+Offset:              2.221ns (Levels of Logic = 2)
+  Source:            miso (PAD)
+  Destination:       Inst_master_SPI/spi_master/sr_7 (FF)
+  Destination Clock: Inst_master_SPI/clock_master/temporal1 falling
+
+  Data Path: miso to Inst_master_SPI/spi_master/sr_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.851  miso_IBUF (miso_IBUF)
+     LUT4:I1->O            1   0.479   0.000  Inst_master_SPI/spi_master/sr_mux0000<7>1 (Inst_master_SPI/spi_master/sr_mux0000<7>)
+     FDCE_1:D                  0.176          Inst_master_SPI/spi_master/sr_7
+    ----------------------------------------
+    Total                      2.221ns (1.370ns logic, 0.851ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_master_SPI/clock_master/temporal1'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              7.610ns (Levels of Logic = 2)
+  Source:            Inst_master_SPI/spi_master/ss_n (FF)
+  Destination:       sck (PAD)
+  Source Clock:      Inst_master_SPI/clock_master/temporal1 falling
+
+  Data Path: Inst_master_SPI/spi_master/ss_n to sck
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE_1:C->Q           2   0.626   0.915  Inst_master_SPI/spi_master/ss_n (Inst_master_SPI/spi_master/ss_n)
+     LUT2:I1->O            1   0.479   0.681  Inst_master_SPI/sck1 (sck_OBUF)
+     OBUF:I->O                 4.909          sck_OBUF (sck)
+    ----------------------------------------
+    Total                      7.610ns (6.014ns logic, 1.596ns route)
+                                       (79.0% logic, 21.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.761ns (Levels of Logic = 2)
+  Source:            Inst_master_SPI/clock_master/temporal (FF)
+  Destination:       sck (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Inst_master_SPI/clock_master/temporal to sck
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.626   1.066  Inst_master_SPI/clock_master/temporal (Inst_master_SPI/clock_master/temporal1)
+     LUT2:I0->O            1   0.479   0.681  Inst_master_SPI/sck1 (sck_OBUF)
+     OBUF:I->O                 4.909          sck_OBUF (sck)
+    ----------------------------------------
+    Total                      7.761ns (6.014ns logic, 1.747ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_divider/temporal1'
+  Total number of paths / destination ports: 248 / 4
+-------------------------------------------------------------------------
+Offset:              10.481ns (Levels of Logic = 11)
+  Source:            contador_24 (FF)
+  Destination:       tierra<3> (PAD)
+  Source Clock:      clock_divider/temporal1 falling
+
+  Data Path: contador_24 to tierra<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.626   1.078  contador_24 (contador_24)
+     LUT2:I0->O            1   0.479   0.000  tierra_cmp_eq00001_wg_lut<0> (tierra_cmp_eq00001_wg_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  tierra_cmp_eq00001_wg_cy<0> (tierra_cmp_eq00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  tierra_cmp_eq00001_wg_cy<1> (tierra_cmp_eq00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  tierra_cmp_eq00001_wg_cy<2> (tierra_cmp_eq00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  tierra_cmp_eq00001_wg_cy<3> (tierra_cmp_eq00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  tierra_cmp_eq00001_wg_cy<4> (tierra_cmp_eq00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  tierra_cmp_eq00001_wg_cy<5> (tierra_cmp_eq00001_wg_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  tierra_cmp_eq00001_wg_cy<6> (tierra_cmp_eq00001_wg_cy<6>)
+     MUXCY:CI->O           8   0.246   1.216  tierra_cmp_eq00001_wg_cy<7> (display_and0000)
+     LUT3:I0->O            1   0.479   0.681  tierra_mux0000<3>1 (tierra_0_OBUFT)
+     OBUFT:I->O                4.909          tierra_0_OBUFT (tierra<0>)
+    ----------------------------------------
+    Total                     10.481ns (7.507ns logic, 2.974ns route)
+                                       (71.6% logic, 28.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'display_not0001'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            display_7 (LATCH)
+  Destination:       display<7> (PAD)
+  Source Clock:      display_not0001 rising
+
+  Data Path: display_7 to display<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.551   0.681  display_7 (display_7)
+     OBUF:I->O                 4.909          display_7_OBUF (display<7>)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.18 secs
+ 
+--> 
+
+Total memory usage is 262068 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

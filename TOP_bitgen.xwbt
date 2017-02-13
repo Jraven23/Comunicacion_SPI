@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Comunicacion_SPI _display - Copy\TOP.ncd
+OUTFILE=D:\Comunicacion_SPI _display - Copy\TOP.bit
+FAMILY=Spartan3
+PART=xc3s200-5ft256
+WORKINGDIR=D:\Comunicacion_SPI _display - Copy
+LICENSE=WebPack
+USER_INFO=210680958_0_0_252

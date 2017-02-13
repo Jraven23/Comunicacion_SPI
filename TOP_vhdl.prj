@@ -1,0 +1,6 @@
+vhdl work "D:\Comunicacion_SPI _display - Copy\sincronizador.vhd"
+vhdl work "D:\Comunicacion_SPI _display - Copy\master_SPI.vhd"
+vhdl work "D:\Comunicacion_SPI _display - Copy\decoder.vhd"
+vhdl work "D:\Comunicacion_SPI _display - Copy\clock_divider2.vhd"
+vhdl work "D:\Comunicacion_SPI _display - Copy\antirrebote.vhd"
+vhdl work "D:\Comunicacion_SPI _display - Copy\TOP.vhd"

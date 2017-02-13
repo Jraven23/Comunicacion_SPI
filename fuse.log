@@ -1,0 +1,39 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP_tb_isim_beh.exe -prj C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP_tb_beh.prj work.TOP_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/sincronizador.vhd" into library work
+Parsing VHDL file "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/master_SPI.vhd" into library work
+Parsing VHDL file "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/decoder.vhd" into library work
+Parsing VHDL file "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/clock_divider2.vhd" into library work
+Parsing VHDL file "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/antirrebote.vhd" into library work
+Parsing VHDL file "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP.vhd" into library work
+WARNING:HDLCompiler:946 - "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP.vhd" Line 126: Actual for formal port reset_n is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP.vhd" Line 129: Actual for formal port start_n is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP.vhd" Line 136: Actual for formal port reset_n is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP.vhd" Line 159: Actual for formal port reset_n is neither a static name nor a globally static expression
+Parsing VHDL file "C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity SPI [\SPI(8)\]
+Compiling architecture behavioral of entity StateMachine [\StateMachine(8)\]
+Compiling architecture behavioral of entity Clock_divider [clock_divider_default]
+Compiling architecture estructural of entity master_SPI [\master_SPI(8)\]
+Compiling architecture behavioral of entity Clock_divider2 [clock_divider2_default]
+Compiling architecture dataflow of entity decoder [decoder_default]
+Compiling architecture behavioral of entity sincronizador [sincronizador_default]
+Compiling architecture rt of entity antirrebote [antirrebote_default]
+Compiling architecture estructural of entity TOP [\TOP(8)\]
+Compiling architecture behavior of entity top_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 24 VHDL Units
+Built simulation executable C:/Users/jorge/Desktop/Comunicacion_SPI _display - Copy/TOP_tb_isim_beh.exe
+Fuse Memory Usage: 37268 KB
+Fuse CPU Usage: 530 ms
